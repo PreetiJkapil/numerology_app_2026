@@ -1,5 +1,21 @@
 import streamlit as st
 
+st.set_page_config(
+    page_title="Numerology Prediction 2026",
+    layout="centered",
+    initial_sidebar_state="collapsed",
+)
+
+# Hide Streamlit default menu and footer
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 st.title("🔮 Numerology Prediction 2026")
 
 # ---------- INPUT ----------
@@ -51,3 +67,4 @@ if st.button("Get Prediction"):
         st.write("**Personal Year (2026):**", personal_year)
         st.write("### 🔮 Prediction")
         st.info(predictions[driver][personal_year])
+
